@@ -1,0 +1,15 @@
+<div class="card-container">
+    <a class="pageLink" routerLink="/search"> Search </a>
+</div>
+<h1 style="text-align-last: center;">Search History</h1>
+<div class="searchList">
+    <h3 class="searchHeader">Query</h3>
+    <h3 class="searchHeader">Tag</h3>
+</div>
+<div *ngFor="let data of searchHistory">
+    <div class="searchList">
+        <p class="searchHeader">{{data.query}}</p>
+        <p class="searchHeader">{{data.tag}}</p>
+    </div>
+    <br />
+</div>

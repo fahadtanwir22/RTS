@@ -1,0 +1,71 @@
+.main_searchbar{
+    width: 50%;
+    height: 35px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.pageLink{
+    float: right;
+    color: black;
+    margin-right: 15px;
+}
+
+.main_div{
+    text-align: center;
+    margin-top: 17%;
+}
+
+.main_dropdown{
+    width: 150px;
+    height: 25px;
+}
+
+.dropdown{
+    width: 150px;
+    height: 35px;
+    border-radius: 20px; 
+    margin: auto 0 15px 5px;
+}
+
+.main_button{
+    margin-left: 10px; 
+    height: 25px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: #deecf9;
+    cursor: pointer;
+}
+
+.button{
+    width: 100px;
+    border-radius: 15px;
+    background-color: #deecf9;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 20px; 
+    margin: auto 0 15px 5px;
+}
+
+.searchbar{
+    width: 40%;
+    height: 35px;
+    border-radius: 20px; 
+    margin: auto 0 15px 5px;
+    padding: 10px;
+}
+
+.list{
+    margin: 25px 12px 25px 12px;
+}
+
+.desc_list{
+    color: #696969;
+    font-size: 12px;
+}
+
+.list_data{
+    text-align: center;
+    margin-top: 10%;
+}

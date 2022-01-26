@@ -1,0 +1,15 @@
+.searchHeader{
+    width: 50%;
+}
+
+.searchList{
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+.pageLink{
+    float: right;
+    color: black;
+    margin-right: 15px;
+}

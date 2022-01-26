@@ -1,0 +1,48 @@
+<div class="" style="display: flow-root">
+    <a class="pageLink" routerLink="/history"> History </a>
+</div>
+
+<div *ngIf="changeView" class="main_div">
+    <h1>RTS</h1>
+    <div>
+        <input class="main_searchbar" type="search" id="search" placeholder="Search Here" (input)="inputSearch($event)">
+    </div>
+    <div>
+        <select (change)="dropdownSelect($event)" class="main_dropdown">
+            <option *ngFor="let option of headers">{{option}}</option>
+        </select>
+        <button class="main_button" (click)="onSearch()" [disabled]="query === ''">
+            Search
+        </button>
+    </div>
+</div>
+
+<div *ngIf="!changeView">
+    <h1>RTS</h1>
+    <br>
+    <div style="display: flex;">
+        <input class="searchbar" type="search" placeholder="Search Here" (change)="inputSearch($event)" id=""
+            value={{query}}>
+        <select (change)="dropdownSelect($event)" class="dropdown">
+            <option [selected]="option===tag" *ngFor="let option of headers">{{option}}</option>
+        </select>
+        <button class="button" (click)="onSearch()">
+            Search
+        </button>
+    </div>
+</div>
+<div *ngIf="hitsData.length > 0">
+    <div class="list" *ngFor="let data of hitsData; let i = index">
+        <p>{{data.title ? data.title : "Title Not Found"}}
+            <span *ngIf="data.url">
+                <a href="{{data.url}}">({{data.url}})</a>
+            </span>
+        </p>
+        <p class="desc_list">{{data.points}} points | {{data.author}} | {{difference(data.created_at)}} |
+            {{data.num_comments}} comments</p>
+        <br />
+    </div>
+</div>
+<div *ngIf="hitsData.length == 0 && !changeView">
+    <h4 class="list_data">No Data Found</h4>
+</div>
